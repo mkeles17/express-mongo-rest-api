@@ -1,0 +1,38 @@
+{
+  "name": "books-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && babel src -d dist",
+    "now-build": "npm run build",
+    "clean": "rimraf dist",
+    "db": "babel-node ./db/index.js",
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "start": "npm run clean && npm run build && npm run db && cd dist && node index.js",
+    "test": "jest src --watch"
+  },
+  "dependencies": {
+    "@devmastery/pipe": "^0.0.6",
+    "axios": "^0.18.0",
+    "babel-plugin-inline-dotenv": "^1.2.2",
+    "body-parser": "^1.20.2",
+    "cuid": "^2.1.6",
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "babel-jest": "^24.4.0",
+    "dotenv": "^6.2.0",
+    "faker": "^4.1.0",
+    "jest": "^24.3.1",
+    "mongodb-memory-server": "^4.0.2",
+    "nodemon": "^1.18.10",
+    "rimraf": "^2.6.3"
+  }
+}
