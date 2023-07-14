@@ -8,7 +8,7 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=password
     restart: always
     volumes:
-      - mongodb:/data/db
+      - mongo-data:/data/db
   
   book-api:
     build: .
@@ -35,5 +35,5 @@ services:
       - mongodb
 
 volumes:
-  mongo-db: {}
+  mongo-data: {}
 
