@@ -42,6 +42,7 @@ POST - /api/books/ -> adds the book data given in the RequestBody to the databas
 * BirthDate should have one of the following date formats: MM-DD-YYYY or MM.DD.YYY
 * The same book cannot be added to database more than once.
 * You must use the naming convention as stated above.
+* RequestBody must be in JSON format.
 
 Here is a sample valid RequestBody:
 
@@ -61,7 +62,7 @@ Here is a sample valid RequestBody:
 
 GET - /api/books/ -> lists all the books in the database collection
 
-PUT - /api/books/:id -> modifies the information of the book with the given id according to the RequestBody. If the id or the RequestBosy is not provided, throws an error.
+PUT - /api/books/:id -> modifies the information of the book with the given id according to the RequestBody. If the id or the RequestBosy is not provided, throws an error. RequestBody must be in JSON format.
 
 DELETE - /api/books/:id - deletes the book with the given id from the database. Throws an error if no such book exists with the given id.
 
